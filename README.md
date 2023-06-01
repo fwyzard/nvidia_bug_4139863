@@ -30,3 +30,16 @@ Killed
 ```
 
 The last line of `tmp/test.cudafe1.cpp` is over 300 MB of repeating `std::remove_cv_t< const std::remove_cv_t< const std::remove_cv_t< const ...`, which points to some kind of infinite loop inside `cudafe++`.
+
+---
+
+A preprocessed source file `test.cu.ii` is also available, to avoid the need for installing Catch2.
+
+It can be used together with the included Makefile to reproduce the crash, and show the start of the infinite-loop line that is being written:
+```
+export COLUMNS
+make
+...
+Segmentation fault (core dumped)
+std::remove_cv_t< const std::remove_cv_t< const std::remove_cv_t< const std::remove_cv_t< const std::remove_cv_t< const std::remove_cv_t< const std::remove_cv_t< const std::remove_cv_t< const std::remove_cv_t< ...
+```
