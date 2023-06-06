@@ -1,4 +1,4 @@
-This is a simple reproducer for NVIDIA bug nnnnnnnn.
+This is a simple reproducer for NVIDIA bug 4139863.
 
 Compiling the main() part of a Catch2 application with `nvcc` in c++20 mode leads to memory exhaustion inside `cudafe++`, likely due to an infinite loop.
 
