@@ -1,6 +1,11 @@
-This is a simple reproducer for NVIDIA bug 4139863.
+This is a simple reproducer for NVIDIA bug 4139863 (https://developer.nvidia.com/bugs/4139863).
+The bug is fixed in an upcoming CUDA 12.4 version.
+
+## Description
 
 Compiling the main() part of a Catch2 application with `nvcc` in c++20 mode leads to memory exhaustion inside `cudafe++`, likely due to an infinite loop.
+
+## Reproducer
 
 A reproducer can be as simple as `test.cu`:
 ```c++
