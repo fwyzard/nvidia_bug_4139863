@@ -1,5 +1,5 @@
 This is a simple reproducer for NVIDIA bug 4139863 (https://developer.nvidia.com/bugs/4139863).
-The bug is fixed in an upcoming CUDA 12.4 version.
+The problem is fixed in an upcoming CUDA 12.4 version.
 
 ## Description
 
